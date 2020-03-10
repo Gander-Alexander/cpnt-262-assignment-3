@@ -1,0 +1,23 @@
+{
+  "name": "cpnt260-assignemnt-1",
+  "version": "1.0.0",
+  "engines": {
+    "node": "^12.16.1"
+  },
+  "description": "An assignemnt for unit cpnt260 for sait",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mongodb": "^3.5.4",
+    "node": "^13.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Richard Avery",
+  "license": "ISC"
+}

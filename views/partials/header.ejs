@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <%- include('pages-except-gallery.ejs') %>
+
+  
+
+
+
+</head>
+
+<body>
+  <nav>
+    <ul class="nav-links">    <!-- This at first confused me but learning that the space in between the injection is rerved for html or javascript helped me figure out how to make the background change on the active-->
+      <li <% if (title == 'Home Page') {%> class="active" <% } %> style="--animation-order: 1;"><a href="/">Home
+          Page</a></li>
+      <li <% if (title == 'Gallery') {%> class="active" <% } %> style="--animation-order: 2;"><a href="/gallery">Image
+          Gallery</a></li>
+      <li <% if (title == 'Dilbert Comic Section') {%> class="active" <% } %> style="--animation-order: 3;"><a
+          href="/dilbert">Dilbert</a></li>
+      <li <% if (title == 'Register') {%> class="active" <% } %> style="--animation-order: 4;"><a
+          href="/register">Register</a></li>
+    </ul>
+  </nav>

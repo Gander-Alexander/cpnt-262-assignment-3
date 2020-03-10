@@ -1,0 +1,17 @@
+/* A nice footer I had made for Gary's gitsass project----------------------------- */
+footer {
+    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: rgba(172, 23, 23, 0.747);
+    height: 8.3em;
+    width: fit-content;
+  }
+  
+  .copyright {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin-top: 1.8em;
+    color: rgb(75, 67, 67);
+  }

@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+<header>
+  <h1><%= title %></h1>
+</header>
+<p><%= description %></p>
+
+
+
+<main>
+       
+  <% 
+  gallery.forEach(element => {
+  %>
+   <figure class="cards">
+    <a href="gallery/<%= element.id  %> ">
+    <img class="images" src="images/sm/<%= element.fileName  %>" alt="<%= element.title %>">
+    </a>
+    <figcaption>
+      <div>
+        <p class="texts"><%= element.title  %></p>
+      </div>
+      <div>
+        <p class="texts">Credit:  <%= element.attribution.credit  %></p>
+      </div>
+      
+      </figcaption>
+  </figure>
+   <%  
+  });  
+  %>
+  
+</main>
+
+
+
+
+
+<%- include('partials/footer') %>

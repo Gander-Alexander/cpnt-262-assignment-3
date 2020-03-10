@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+<header>
+  <h1><%= title %></h1>
+</header>
+<form action="/register/new" method="POST">
+  <fieldset>
+    <legend><%= description %></legend>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name">
+    <label for="definition">Email</label>
+    <input type="text" name="Email" id="email">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+    <label for="confpassword">Confirm Password</label>
+    <input type="confpassword" name="confpassword" id="confpassword">
+    <button type="submit" class="subbutton">Submit Info</button>
+  </fieldset>
+</form>
+<%- include('partials/footer') %>

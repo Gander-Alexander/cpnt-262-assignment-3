@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<header>
+  <h1><%= title %></h1>
+</header>
+
+
+
+
+<figure class="bigImage">
+
+  <img class="centerImage" src="/images/lrg/<%= photo.fileName %>" alt="<%= photo.title %>">
+
+  <figcaption><p>"<%= photo.title %>" photo: <a class="nameAttribute" href="<%= photo.attribution.url %>"><%= photo.attribution.credit %></a> source: <%= photo.attribution.source %></p></figcaption>
+
+</figure>
+
+
+
+
+
+
+<%- include('partials/footer') %>
