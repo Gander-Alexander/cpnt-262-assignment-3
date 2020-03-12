@@ -2,16 +2,17 @@ const path = require('path');
 const express = require('express');
 const ejs = require('ejs');
 const pageInfo = require('./pageInfo');
-const gallery = require('./gallery')
+const gallery = require('./gallery');
 const moment = require('moment');
-const MongoDB = require('mongodb')
-
+const MongoDB = require('mongodb');
+const models = require('./models/Image');
+const mongoose = require('mongoose');
 
 const app = express();
 
 app.set('view engine', 'ejs');
 
-
+// app.locals.models = models;
 
 // This is the moment code for the year on the footer's copy right section
 app.locals.dateofYear = () => {
@@ -31,12 +32,6 @@ app.get('/', function (req, res) {
 
 
 
-
-
-
-
-
-
 app.get('/gallery', function (req, res) {
   app.locals.gallery = require('./gallery');
   res.render('gallery', pageInfo.gallery);
@@ -51,8 +46,6 @@ app.get('/gallery/:id',function(req, res, next) {
   }}
   next();
 });
-
-
 
 
 
@@ -93,17 +86,3 @@ app.listen(PORT, function () {
   console.log(`Listening on port ${PORT}`);
 });
 
-const db = process.env.MONGODB_URL;
-
-const connectDB = async () => {
-  try {
-    await mongoose.connect(db, {
-      useUnifiedTopology: true,
-      useNewUrlParser: true
-    });
-    console.log("MongoDB is Connected...");
-  } catch (err) {
-    console.error(err.message);
-    process.exit(1);
-  }
-};

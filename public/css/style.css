@@ -142,32 +142,31 @@ li a:hover {
 
 /* Dibert Comic page----------------------------------------------------------------------------------------------------- */
 
+
 #dilb {
   animation: slide-up .4s ease;
+  animation: slide-left .4s ease;
   margin-top: 4rem;
   margin-bottom: 33vh;
 }
 
 #dilb a {
-  
   font-size: 6rem;
   transition: .4s ease-in-out;
 }
 
 #dilb a:hover {
   color: crimson;
-  
+
 }
 
 
-@keyframes slide-up {
+
+@keyframes slide-left {
   0% {
     transform: translateX(-100vw);
   }
-  50% {
-    transform: translateX(10vw);
   }
-}
 
 
 
@@ -217,6 +216,13 @@ from {
 /* ------------------------------------------------------- */
 
 /* style for the large id image--------------------------- */
+
+
+h3 {
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  background-color: aliceblue;
+}
 
 .bigImage {
   display: flex;
